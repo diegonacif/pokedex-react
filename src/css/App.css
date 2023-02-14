@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../assets/pokemon-bg-02.png");
+  background-size: cover;
+  perspective: 1000px;
+}
+.app-container .specs {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-radius: 8px;
+  background-color: rgba(240, 255, 255, 0.7);
+  transform: rotateX(0deg) rotateY(55deg);
+  transform-style: preserve-3d;
+}
+.app-container .specs .row-wp {
+  display: flex;
+  gap: 0.5rem;
+}
+.app-container .poke-space {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.app-container .poke-space .poke-name {
+  font-size: 2rem;
+}
+.app-container .stats {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-radius: 8px;
+  background-color: rgba(240, 255, 255, 0.7);
+  transform: rotateX(0deg) rotateY(-55deg);
+  transform-style: preserve-3d;
+}
+.app-container input {
+  width: 5rem;
+  height: 1.5rem;
+  text-align: center;
+}
+.app-container span {
+  color: black;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+.app-container span:hover {
+  background-color: rgba(244, 166, 4, 0.7);
+  transition: background-color 0.3s;
+}
+.app-container img {
+  width: 10rem;
+}/*# sourceMappingURL=App.css.map */
