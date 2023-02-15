@@ -1,3 +1,9 @@
+// Color Palette
+$white: #ffffff;
+$gray-100: #f2f2f2;
+$gray-600: #616161;
+$blue: #30a7d7;
+
 * {
   padding: 0;
   margin: 0;
@@ -14,9 +20,18 @@
   main {
     display: flex;
     width: 80rem;
-    height: 10rem;
+    height: 100%;
     max-width: 100%;
     background: #fff url('../assets/container_bg.png');
+    padding: 0 4rem;
+
+    .main-content {
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+    }
   }
   
 }
+
+@import '../components/Card/Card';
