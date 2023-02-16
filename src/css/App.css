@@ -41,6 +41,10 @@
   height: fit-content;
   background-color: #f2f2f2;
 }
+.card-container .img-wrapper img {
+  aspect-ratio: 1/1;
+  width: 200px;
+}
 .card-container .card-info {
   padding-left: 1rem;
 }
