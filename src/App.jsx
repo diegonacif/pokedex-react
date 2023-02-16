@@ -7,27 +7,55 @@ import { Card } from './components/Card/Card';
 
 export const App = () => {
   const [pokemon, setPokemon] = useState(null);
-  const official = "official-artwork";
+  const [pokemonNames, setPokemonNames] = useState(null);
+  const [pokemonSearchInput, setPokemonSearchInput] = useState("");
 
+   // Get Pokemon names list
   useEffect(() => {
-    api.get("nidoqueen").then(({data}) => {
+    //?limit=1279
+    api.get("?limit=1279").then(({data}) => {
+      setPokemonNames(
+        data?.results.map(data => data.name)
+      );
+    })
+    .catch(() => {
+      console.log("error on getting names")
+    });
+  }, []);
+
+  // Get Pokemon By Name
+  useEffect(() => {
+    api.get("bulbasaur").then(({data}) => {
       setPokemon(data);
     })
     .catch(() => {
-      console.log("error")
+      console.log("error on get pokemon data")
     });
   }, []);
-  console.log(pokemon?.sprites.other.official)
-  
+
+  function handlePokemonSearch(e) {
+    setPokemonSearchInput(e.target.value);
+  }
+
+  function matchName(name) {
+    if (name === pokemonSearchInput) {
+      return name;
+    }
+  }
+
+  const searchResult = pokemonNames.filter(matchName)
+
+  console.log(searchResult)
+    
   return (
     <div className="app-body">
       <main>
         <div className="main-content">
+          <input type="text" onChange={(e) => handlePokemonSearch(e)} />
           <Card 
             id={pokemon?.id}
             name={pokemon?.name}
             types={pokemon?.types}
-            // img={pokemon?.other}
           />
         </div>
       </main>
