@@ -9,7 +9,7 @@ export const App = () => {
   const [pokemon, setPokemon] = useState(null);
   const [pokemonNames, setPokemonNames] = useState(null);
   const [pokemonSearchInput, setPokemonSearchInput] = useState("");
-  const [pokemonShownList, setPokemonShownList] = useState(null);
+  const [pokemonSearchResult, setPokemonSearchResult] = useState([])
 
   // Get Pokemon names list
   useEffect(() => {
@@ -26,8 +26,8 @@ export const App = () => {
 
   // Get all Pokemon
   useEffect(() => {
-    api.get("?limit=1279").then(({ data }) => {
-      setPokemon(data);
+    api.get("?limit=1279").then(({data}) => {
+      setPokemon(data.results);
     })
       .catch(() => {
         console.log("error on get pokemon data")
@@ -38,16 +38,25 @@ export const App = () => {
     setPokemonSearchInput(e.target.value);
   }
 
-  // function matchName(name) {
-  //   if (name === pokemonSearchInput) {
-  //     return name;
-  //   }
-  // }
-
   // const searchResult = pokemonNames?.filter(name => name.includes(pokemonSearchInput))
+  const searchResult = pokemon?.filter(poke => poke.name.includes(pokemonSearchInput))
 
-  console.log(pokemon?.results.map(data => data.name.indexOf("ivysaur")))
+  async function fetchResult() {
+    setPokemonSearchResult([]);
+    const search = await searchResult?.map(data => data.url);
 
+    search.map((data) => {
+      fetch(data)
+      .then(response => response.json())
+      .then((pokeData) => {
+        setPokemonSearchResult(oldArray => [...oldArray, pokeData]);
+      })
+      // .then(function(pokeData){ console.log(pokeData) })
+    })
+  }
+
+  console.log(pokemonSearchResult)
+    
   return (
     <div className="app-body">
       <main>
@@ -69,6 +78,7 @@ export const App = () => {
           /> */}
         </div>
       </main>
+        <button onClick={() => fetchResult()}>button</button>
     </div>
   )
 }
