@@ -7,7 +7,7 @@ export const Card = ({ id, name, types }) => {
         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} alt="" />
       </div>
       <div className="card-info">
-        {/* <p>Nº {id}</p> */}
+        <p>Nº {id}</p>
         <h3>{name}</h3>
       </div>
       <div className="type-wrapper">
