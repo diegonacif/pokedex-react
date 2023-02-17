@@ -7,23 +7,35 @@
 
   main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 80rem;
     height: 100%;
     max-width: 100%;
     background: #fff url('../assets/container_bg.png');
-    padding: 0 4rem;
+    // padding: 0 4rem;
 
-    .main-content {
+    header {
       width: 100%;
-      max-width: 56.5625rem;
-      height: 100%;
-      background-color: $white;
-      padding: 0 1rem;
+      background-color: $gray-800;
+    }
 
-      .search-result {
-        display: flex;
-        flex-wrap: wrap;
+    .body-content {
+      width: fit-content;
+      padding: 0 4rem;
+
+      .main-content {
+        width: 100%;
+        max-width: 56.5625rem;
+        height: 100%;
+        background-color: $white;
+        padding: 0 1rem;
+        // margin: 0 4rem;
+  
+        .search-result {
+          display: flex;
+          flex-wrap: wrap;
+        }
       }
     }
   }

@@ -58,19 +58,25 @@ export const App = () => {
   return (
     <div className="app-body">
       <main>
-        <div className="main-content">
-          <input type="text" onChange={(e) => handlePokemonSearch(e)} />
-          <button onClick={() => fetchResult()}>button</button>
-          <div className="search-result">
-            {
-              pokemonSearchResult?.map((pokemon) => 
-                <Card
-                  id={pokemon?.id}
-                  name={pokemon?.name}
-                  types={pokemon?.types}
-                />
-              )
-            }
+        <header>
+          <div className="header-content">
+            <input type="text" onChange={(e) => handlePokemonSearch(e)} />
+            <button onClick={() => fetchResult()}>button</button>
+          </div>
+        </header>
+        <div className="body-content">
+          <div className="main-content">
+            <div className="search-result">
+              {
+                pokemonSearchResult?.map((pokemon) => 
+                  <Card
+                    id={pokemon?.id}
+                    name={pokemon?.name}
+                    types={pokemon?.types}
+                  />
+                )
+              }
+            </div>
           </div>
         </div>
       </main>

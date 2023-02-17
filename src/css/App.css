@@ -52,21 +52,31 @@
 }
 .app-body main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 80rem;
   height: 100%;
   max-width: 100%;
   background: #fff url("../assets/container_bg.png");
+}
+.app-body main header {
+  width: 100%;
+  background-color: #313131;
+}
+.app-body main .body-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 0 4rem;
 }
-.app-body main .main-content {
+.app-body main .body-content .main-content {
   width: 100%;
   max-width: 56.5625rem;
   height: 100%;
   background-color: #ffffff;
   padding: 0 1rem;
 }
-.app-body main .main-content .search-result {
+.app-body main .body-content .main-content .search-result {
   display: flex;
   flex-wrap: wrap;
 }/*# sourceMappingURL=App.css.map */
