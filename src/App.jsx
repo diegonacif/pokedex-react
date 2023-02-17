@@ -43,7 +43,7 @@ export const App = () => {
     }
   }
 
-  const searchResult = pokemonNames.filter(matchName)
+  const searchResult = pokemonNames?.filter(name => name.includes(pokemonSearchInput))
 
   console.log(searchResult)
     
