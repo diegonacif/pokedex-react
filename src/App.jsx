@@ -61,15 +61,17 @@ export const App = () => {
         <div className="main-content">
           <input type="text" onChange={(e) => handlePokemonSearch(e)} />
           <button onClick={() => fetchResult()}>button</button>
-          {
-            pokemonSearchResult?.map((pokemon) => 
-              <Card
-                id={pokemon?.id}
-                name={pokemon?.name}
-                types={pokemon?.types}
-              />
-            )
-          }
+          <div className="search-result">
+            {
+              pokemonSearchResult?.map((pokemon) => 
+                <Card
+                  id={pokemon?.id}
+                  name={pokemon?.name}
+                  types={pokemon?.types}
+                />
+              )
+            }
+          </div>
         </div>
       </main>
         

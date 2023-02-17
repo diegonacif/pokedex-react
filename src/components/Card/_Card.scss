@@ -1,16 +1,22 @@
 .card-container {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 23.4375%;
+  // max-width: fit-content;
+  margin: 0 0.78125% 50px; 
 
   .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: fit-content;
     height: fit-content;
     background-color: $gray-100;
+    padding: 0.5rem;
 
     img {
       aspect-ratio: 1 / 1;
-      width: 200px;
+      width: 100%;
     }
 
   }

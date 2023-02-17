@@ -1,0 +1,30 @@
+.app-body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: url('../assets/body_bg.png');
+
+  main {
+    display: flex;
+    justify-content: center;
+    width: 80rem;
+    height: 100%;
+    max-width: 100%;
+    background: #fff url('../assets/container_bg.png');
+    padding: 0 4rem;
+
+    .main-content {
+      width: 100%;
+      max-width: 56.5625rem;
+      height: 100%;
+      background-color: $white;
+      padding: 0 1rem;
+
+      .search-result {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
