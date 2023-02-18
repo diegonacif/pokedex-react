@@ -16,8 +16,28 @@
     // padding: 0 4rem;
 
     header {
+      display: flex;
+      justify-content: center;
       width: 100%;
       background-color: $gray-800;
+      padding: 0 4rem;
+
+      .header-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        max-width: 56.5625rem;
+        padding: 1rem 1.25rem;
+
+        .header-primary {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            color: $white;
+          }
+        }
+      }
     }
 
     .body-content {

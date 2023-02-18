@@ -60,8 +60,25 @@
   background: #fff url("../assets/container_bg.png");
 }
 .app-body main header {
+  display: flex;
+  justify-content: center;
   width: 100%;
   background-color: #313131;
+  padding: 0 4rem;
+}
+.app-body main header .header-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 56.5625rem;
+  padding: 1rem 1.25rem;
+}
+.app-body main header .header-content .header-primary {
+  display: flex;
+  flex-direction: column;
+}
+.app-body main header .header-content .header-primary label {
+  color: #ffffff;
 }
 .app-body main .body-content {
   width: -webkit-fit-content;

@@ -60,8 +60,19 @@ export const App = () => {
       <main>
         <header>
           <div className="header-content">
-            <input type="text" onChange={(e) => handlePokemonSearch(e)} />
-            <button onClick={() => fetchResult()}>button</button>
+            <div className="header-primary">
+              <label htmlFor="name-search">Nome ou número</label>
+              <div className="input-wrapper">
+                <input type="text" onChange={(e) => handlePokemonSearch(e)} name="name-search" />
+                <button onClick={() => fetchResult()}>button</button>
+              </div>
+              <span>Use a pesquisa avançada para explorar Pokémon por tipo, fraqueza, habilidade e mais!</span>
+            </div>
+            <div className="header-secondary">
+              <div className="green-tip">
+                Realize a busca por Pokémon pelo nome ou usando o número do Pokédex Nacional.
+              </div>
+            </div>
           </div>
         </header>
         <div className="body-content">
