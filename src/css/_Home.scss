@@ -26,10 +26,10 @@
       .header-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.75rem;
+        gap: 1rem;
         width: 100%;
         max-width: 56.5625rem;
-        padding: 1.5rem 1.25rem;
+        padding: 1.875rem 1rem;
 
         .header-primary {
           display: flex;
@@ -37,18 +37,19 @@
 
           label {
             font-family: $primary-font;
-            font-size: 1.4375rem;
+            font-size: 1.675rem;
           }
 
           .input-wrapper {
             display: flex;
-            margin-top: 0.5rem;
+            margin-top: 0.75rem;
 
             input {
               padding: 0.56rem;
               border: 3px solid $gray-600;
               border-radius: 4px;
-              width: 19rem;
+              width: 19.75rem;
+              height: 3rem;
               font-family: "Roboto", arial, sans-serif;
               font-size: 1rem;
               color: $gray-800;
@@ -58,12 +59,19 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              width: 3.125rem;
+              width: 3.5rem;
               height: 100%;
               margin-left: 1.25rem;
               background-color: $orange-500; 
               border-radius: 4px;
               border: 0;
+              cursor: pointer;
+              transition: background-color 0.1s;
+
+              &:hover {
+                background-color: $orange-700;
+                transition: background-color 0.3s;
+              }
 
               img {
                 width: 1.25rem;
@@ -75,7 +83,7 @@
           span {
             font-family: "Roboto", arial, sans-serif;
             margin-top: 0.5rem;
-            font-size: 0.9375rem;
+            font-size: 0.99rem;
 
           }
         }
@@ -96,7 +104,7 @@
     .advanced-search-container {
       position: relative;
       width: 100%;
-      min-height: 4rem;
+      min-height: 3.5rem;
       background-color: $gray-600;
 
       .advanced-search-wrapper {
@@ -108,13 +116,14 @@
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        max-width: 28rem;
+        max-width: 26.8125rem;
         padding: 0.5rem;
         background-color: $gray-600;
         font-family: $primary-font;
         font-weight: 600;
-        font-size: 0.9375rem;
+        font-size: 0.9675rem;
         color: $white;
+        cursor: pointer;
 
         :nth-child(2) {
           display: flex;
@@ -155,7 +164,7 @@
     }
 
     .body-content {
-      width: fit-content;
+      width: 100%;
       padding: 0 4rem;
 
       .main-content {
@@ -164,11 +173,59 @@
         height: 100%;
         background-color: $white;
         padding: 3rem 1rem;
-        // margin: 0 4rem;
+        margin: 0 auto;
+
+        .buttons-wrapper {
+          display: flex;
+          justify-content: space-between;
+          font-family: $primary-font;
+          padding: 0 0.29rem;
+  
+          #surprise-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 21.625rem;
+            height: 3rem;
+            border: 0;
+            border-radius: 4px;
+            background-color: $blue;
+            color: $white;
+            font-family: $secondary-font;
+            font-size: 1.05rem;
+  
+          }
+  
+          .sort-wrapper {
+            span {
+              font-family: $primary-font;
+              font-size: 1.3rem;
+              font-weight: 600;
+              color: #a4a4a4;
+            }
+
+            #sort-button {
+              height: 2.375rem;
+              width: 15.625rem;
+              margin-left: 1rem;
+              border: 0;
+              background-color: $gray-800;
+              border-radius: 4px;
+
+              span {
+                color: $white;
+                font-family: $primary-font;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
   
         .search-result {
           display: flex;
           flex-wrap: wrap;
+          margin-top: 3rem;
         }
       }
     }

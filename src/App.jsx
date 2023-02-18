@@ -78,14 +78,25 @@ export const App = () => {
             </div>
           </div>
         </header>
-          <div className="advanced-search-container">
-            <div className="advanced-search-wrapper">
-              <span>Mostrar busca avançada</span>
-              <span>&gt;</span>
-            </div>
+        <div className="advanced-search-container">
+          <div className="advanced-search-wrapper">
+            <span>Mostrar busca avançada</span>
+            <span>&gt;</span>
           </div>
+        </div>
         <div className="body-content">
           <div className="main-content">
+            <div className="buttons-wrapper">
+              <button id="surprise-button">
+                <span>Surpreenda-me</span>
+              </button>
+              <div className="sort-wrapper">
+                <span>Organizar por</span>
+                <button id="sort-button">
+                  <span>Menor número primeiro</span>
+                </button>
+              </div>
+            </div>
             <div className="search-result">
               {
                 pokemonSearchResult?.map((pokemon) => 
