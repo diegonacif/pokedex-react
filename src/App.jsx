@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
+import { Card } from './components/Card/Card';
 import api from './services/api';
 
+import searchInputImg from './assets/input-search.png';
 import './css/App.css';
-import { Card } from './components/Card/Card';
 
 
 export const App = () => {
@@ -64,7 +65,9 @@ export const App = () => {
               <label htmlFor="name-search">Nome ou número</label>
               <div className="input-wrapper">
                 <input type="text" onChange={(e) => handlePokemonSearch(e)} name="name-search" />
-                <button onClick={() => fetchResult()}>button</button>
+                <button onClick={() => fetchResult()}>
+                  <img src={searchInputImg} alt="" />
+                </button>
               </div>
               <span>Use a pesquisa avançada para explorar Pokémon por tipo, fraqueza, habilidade e mais!</span>
             </div>
@@ -81,6 +84,7 @@ export const App = () => {
               {
                 pokemonSearchResult?.map((pokemon) => 
                   <Card
+                    key={pokemon?.id}
                     id={pokemon?.id}
                     name={pokemon?.name}
                     types={pokemon?.types}

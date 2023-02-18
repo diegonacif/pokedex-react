@@ -21,20 +21,73 @@
       width: 100%;
       background-color: $gray-800;
       padding: 0 4rem;
+      color: $white;
 
       .header-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
         width: 100%;
         max-width: 56.5625rem;
-        padding: 1rem 1.25rem;
+        padding: 1.5rem 1.25rem;
 
         .header-primary {
           display: flex;
           flex-direction: column;
 
           label {
-            color: $white;
+            font-family: $primary-font;
+            font-size: 1.4375rem;
+          }
+
+          .input-wrapper {
+            display: flex;
+            margin-top: 0.5rem;
+
+            input {
+              padding: 0.56rem;
+              border: 3px solid $gray-600;
+              border-radius: 4px;
+              width: 19rem;
+              font-family: "Roboto", arial, sans-serif;
+              font-size: 1rem;
+              color: $gray-800;
+            }
+
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 3.125rem;
+              height: 100%;
+              margin-left: 1.25rem;
+              background-color: $orange-500; 
+              border-radius: 4px;
+              border: 0;
+
+              img {
+                width: 1.25rem;
+                height: 1.25rem;
+              }
+            }
+          }
+
+          span {
+            font-family: "Roboto", arial, sans-serif;
+            margin-top: 0.5rem;
+            font-size: 0.9375rem;
+
+          }
+        }
+
+        .header-secondary {
+          .green-tip {
+            background-color: $green;
+            font-family: $primary-font;
+            font-weight: 600;
+            font-size: 1.1875rem;
+            border-radius: 4px;
+            padding: 1rem 1rem;
           }
         }
       }

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Flexo-Regular";
+  src: url("../assets/fonts/Flexo-Regular.ttf");
+}
+@font-face {
+  font-family: "Flexo-Demi";
+  src: url("../assets/fonts/Flexo-Demi.ttf");
+}
 * {
   padding: 0;
   margin: 0;
@@ -65,20 +73,64 @@
   width: 100%;
   background-color: #313131;
   padding: 0 4rem;
+  color: #ffffff;
 }
 .app-body main header .header-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
   width: 100%;
   max-width: 56.5625rem;
-  padding: 1rem 1.25rem;
+  padding: 1.5rem 1.25rem;
 }
 .app-body main header .header-content .header-primary {
   display: flex;
   flex-direction: column;
 }
 .app-body main header .header-content .header-primary label {
-  color: #ffffff;
+  font-family: "Flexo-Regular", sans-serif;
+  font-size: 1.4375rem;
+}
+.app-body main header .header-content .header-primary .input-wrapper {
+  display: flex;
+  margin-top: 0.5rem;
+}
+.app-body main header .header-content .header-primary .input-wrapper input {
+  padding: 0.56rem;
+  border: 3px solid #616161;
+  border-radius: 4px;
+  width: 19rem;
+  font-family: "Roboto", arial, sans-serif;
+  font-size: 1rem;
+  color: #313131;
+}
+.app-body main header .header-content .header-primary .input-wrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.125rem;
+  height: 100%;
+  margin-left: 1.25rem;
+  background-color: #ee6b2f;
+  border-radius: 4px;
+  border: 0;
+}
+.app-body main header .header-content .header-primary .input-wrapper button img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.app-body main header .header-content .header-primary span {
+  font-family: "Roboto", arial, sans-serif;
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+}
+.app-body main header .header-content .header-secondary .green-tip {
+  background-color: #4DAD5B;
+  font-family: "Flexo-Regular", sans-serif;
+  font-weight: 600;
+  font-size: 1.1875rem;
+  border-radius: 4px;
+  padding: 1rem 1rem;
 }
 .app-body main .body-content {
   width: -webkit-fit-content;
