@@ -78,6 +78,12 @@ export const App = () => {
             </div>
           </div>
         </header>
+          <div className="advanced-search-container">
+            <div className="advanced-search-wrapper">
+              <span>Mostrar busca avançada</span>
+              <span>&gt;</span>
+            </div>
+          </div>
         <div className="body-content">
           <div className="main-content">
             <div className="search-result">
