@@ -2,8 +2,14 @@ import { useEffect, useState } from 'react'
 import { Card } from './components/Card/Card';
 import api from './services/api';
 
+import Dropdown from 'react-dropdown';
 import searchInputImg from './assets/input-search.png';
+
+import whitePokeball from './assets/white-pokeball-icon.png';
+import whiteReload from './assets/reload-icon.svg';
+
 import './css/App.css';
+import 'react-dropdown/style.css';
 
 
 export const App = () => {
@@ -55,7 +61,12 @@ export const App = () => {
   }
 
   // console.log(pokemonSearchResult?.map((data) => (data)))
-    
+
+  const options = [
+    'Menor número primeiro', 'Maior número primeiro', 'A-Z', 'Z-A'
+  ];
+  const dropdownDefaultOption = options[0];
+  
   return (
     <div className="app-body">
       <main>
@@ -88,13 +99,26 @@ export const App = () => {
           <div className="main-content">
             <div className="buttons-wrapper">
               <button id="surprise-button">
+                <img src={whiteReload} alt="" />
                 <span>Surpreenda-me</span>
               </button>
               <div className="sort-wrapper">
                 <span>Organizar por</span>
-                <button id="sort-button">
-                  <span>Menor número primeiro</span>
-                </button>
+                <div className="dropdown-wrapper">
+                  <img src={whitePokeball} alt="" />
+                  <Dropdown 
+                    className='sort-root'
+                    controlClassName='sort-control'
+                    menuClassName='sort-menu'
+                    options={options} 
+                    value={dropdownDefaultOption} 
+                    placeholder="Select an option"
+                    id="sort-button"
+                  />
+                </div>
+                {/* <select id="sort-button">
+                  <option>Menor número primeiro</option>
+                </select> */}
               </div>
             </div>
             <div className="search-result">

@@ -215,6 +215,7 @@
   padding: 0 0.29rem;
 }
 .app-body main .body-content .main-content .buttons-wrapper #surprise-button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,6 +228,21 @@
   color: #ffffff;
   font-family: "Flexo-Demi", sans-serif;
   font-size: 1.05rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.app-body main .body-content .main-content .buttons-wrapper #surprise-button img {
+  width: 1.5rem;
+}
+.app-body main .body-content .main-content .buttons-wrapper #surprise-button span {
+  margin-left: 0.5rem;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper {
+  display: flex;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .app-body main .body-content .main-content .buttons-wrapper .sort-wrapper span {
   font-family: "Flexo-Regular", sans-serif;
@@ -234,18 +250,64 @@
   font-weight: 600;
   color: #a4a4a4;
 }
-.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper #sort-button {
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper {
+  position: relative;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper img {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  z-index: 1000;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root .sort-control {
+  display: flex;
+  align-items: center;
   height: 2.375rem;
   width: 15.625rem;
   margin-left: 1rem;
   border: 0;
   background-color: #313131;
   border-radius: 4px;
-}
-.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper #sort-button span {
   color: #ffffff;
-  font-family: "Flexo-Regular", sans-serif;
-  font-size: 1rem;
+  padding-left: 3rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root .sort-menu {
+  background-color: #616161;
+  width: 15.625rem;
+  left: 1rem;
+  border: 0;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root .sort-menu .is-selected {
+  background-color: #616161;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root .sort-menu .Dropdown-option {
+  color: #ffffff;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root .sort-menu .Dropdown-option:hover {
+  background-color: #313131;
+}
+.app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root .sort-menu .Dropdown-option:selected {
+  background-color: #313131;
 }
 .app-body main .body-content .main-content .search-result {
   display: flex;
