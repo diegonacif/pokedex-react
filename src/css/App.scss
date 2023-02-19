@@ -1,12 +1,45 @@
 // Color Palette
 $white: #ffffff;
 $gray-100: #f2f2f2;
+$gray-400: #919191;
 $gray-600: #616161;
 $gray-800: #313131;
+$black: #212121;
 $blue: #30a7d7;
 $orange-500: #ee6b2f;
 $orange-700: #da471b;
 $green: #4DAD5B;
+
+// Color Types
+$bug-color: #729f3f;
+$dragon-color: linear-gradient(0deg, #f16e57 49%, #53a4cf 51%);
+// #53a4cf and #f16e57
+
+$fairy-color: #fdb9e9;
+$fire-color: #fd7d24;
+$ghost-color: #7B62A3;
+$ground-color: #fff;
+// #f7de3f and #ab9842
+
+$normal-color: #a4acaf;
+$psychic-color: #f366b9;
+$steel-color: #9eb7b8;
+$dark-color: #707070;
+$electric-color: #eed535;
+$fighting-color: #d87234;
+$flying-color: #fff;
+// #3dc7ef and #bdb9b8
+
+$grass-color: #9bcc50;
+$ice-color: #51c4e7;
+$poison-color: #b97fc9;
+$rock-color: #a38c21;
+$water-color: #4592c4;
+
+@mixin type-color($color, $isGradient: "no") {
+  background-color: #{$color};
+}
+
 
 // Fonts
 @font-face {

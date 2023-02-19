@@ -17,11 +17,13 @@ export const App = () => {
   const [pokemonNames, setPokemonNames] = useState(null);
   const [pokemonSearchInput, setPokemonSearchInput] = useState("");
   const [pokemonSearchResult, setPokemonSearchResult] = useState([{}])
+  
 
   // Get Pokemon names list
   useEffect(() => {
     //?limit=1279
-    api.get("?limit=1279").then(({ data }) => {
+    // api.get("?limit=1279").then(({ data }) => {
+    api.get("?limit=250").then(({ data }) => {
       setPokemonNames(
         data?.results.map(data => data.name)
       );
@@ -33,7 +35,8 @@ export const App = () => {
 
   // Get all Pokemon
   useEffect(() => {
-    api.get("?limit=1279").then(({data}) => {
+    // api.get("?limit=1279").then(({data}) => {
+    api.get("?limit=250").then(({data}) => {
       setPokemon(data.results);
     })
       .catch(() => {
@@ -45,13 +48,21 @@ export const App = () => {
     setPokemonSearchInput(e.target.value);
   }
 
-  const searchResult = pokemon?.filter(poke => poke.name.includes(pokemonSearchInput))
+  // const [searchResult, setSearchResult] = useState([])
+  // useEffect(() => {
+  //   setSearchResult(pokemon?.filter(poke => poke.name.includes(pokemonSearchInput)))
+  // }, [])
+
+  // const searchResult = pokemon?.filter(poke => poke.name.includes(pokemonSearchInput))
 
   async function fetchResult() {
+    const searchResult = await pokemon?.filter(poke => poke.name.includes(pokemonSearchInput));
+
     setPokemonSearchResult([]);
+
     const search = await searchResult?.map(data => data.url);
 
-    search.map((data) => {
+    search?.map((data) => {
       fetch(data)
       .then(response => response.json())
       .then((pokeData) => {
@@ -60,8 +71,11 @@ export const App = () => {
     })
   }
 
-  // console.log(pokemonSearchResult?.map((data) => (data)))
-
+  useEffect(() => {
+    fetchResult();
+  }, [pokemon])
+  
+  // Dropdown config
   const options = [
     'Menor número primeiro', 'Maior número primeiro', 'A-Z', 'Z-A'
   ];
