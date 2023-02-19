@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import pokeImg from '../../assets/001.png';
+import pokeLoading from '../../assets/pokeball-title.png';
 
 export const Card = ({ id, name, types }) => {
 
-  //Formatting Id numbers
+  // Formatting Id numbers
   const [formatedId, setFormatedId] = useState(0);
   useEffect(() => {
     if(id < 10) {
@@ -17,14 +17,33 @@ export const Card = ({ id, name, types }) => {
     }
   }, [])
 
+  // On image load
+  const [loadedImg, setLoadedImg] = useState(false);
+  const onLoad = () => {
+    setLoadedImg(true)
+  }
+
   return (
     <div className="card-container" key={`card-${id}`}>
       <div className="img-wrapper">
-        <img 
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} 
-          alt={`${name?.charAt(0).toUpperCase() + name?.slice(1)} image`} 
-          loading="lazy"
-        />
+        {
+          !loadedImg ?
+          <img
+            src={pokeLoading}
+          /> :
+          <img 
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} 
+            alt={`${name?.charAt(0).toUpperCase() + name?.slice(1)} image`} 
+            loading="lazy"
+          />
+        }
+      <img 
+        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} 
+        alt={`${name?.charAt(0).toUpperCase() + name?.slice(1)} image`} 
+        loading="lazy"
+        onLoad={() => onLoad()}
+        id="loader-img"
+      />
       </div>
       <div className="card-info">
         <p>Nº {formatedId}</p>

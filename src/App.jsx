@@ -42,7 +42,7 @@ export const App = () => {
       .catch(() => {
         console.log("error on get pokemon data")
       });
-  }, [pokemonSearchInput]);
+  }, []);
 
   function handlePokemonSearch(e) {
     setPokemonSearchInput(e.target.value);
@@ -72,6 +72,8 @@ export const App = () => {
   }
 
   useEffect(() => {
+    // console.log(pokemon)
+
     fetchResult();
   }, [pokemon])
   
