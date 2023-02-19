@@ -12,32 +12,26 @@ $green: #4DAD5B;
 
 // Color Types
 $bug-color: #729f3f;
-$dragon-color: linear-gradient(0deg, #f16e57 49%, #53a4cf 51%);
-// #53a4cf and #f16e57
-
+$dragon-color: linear-gradient(0deg, #f16e57 44%, #53a4cf 56%);
 $fairy-color: #fdb9e9;
 $fire-color: #fd7d24;
 $ghost-color: #7B62A3;
-$ground-color: #fff;
-// #f7de3f and #ab9842
-
+$ground-color: linear-gradient(0deg, #ab9842 44%, #f7de3f 56%);
 $normal-color: #a4acaf;
 $psychic-color: #f366b9;
 $steel-color: #9eb7b8;
 $dark-color: #707070;
 $electric-color: #eed535;
 $fighting-color: #d87234;
-$flying-color: #fff;
-// #3dc7ef and #bdb9b8
-
+$flying-color: linear-gradient(0deg, #bdb9b8 44%, #3dc7ef 56%);
 $grass-color: #9bcc50;
 $ice-color: #51c4e7;
 $poison-color: #b97fc9;
 $rock-color: #a38c21;
 $water-color: #4592c4;
 
-@mixin type-color($color, $isGradient: "no") {
-  background-color: #{$color};
+@mixin type-color($color) {
+  background: #{$color};
 }
 
 

@@ -71,75 +71,75 @@
   margin-top: 0.25rem;
 }
 .card-container .type-wrapper .bug-type {
-  background-color: #729f3f;
+  background: #729f3f;
   color: #ffffff;
 }
 .card-container .type-wrapper .dragon-type {
-  background-color: linear-gradient(0deg, #f16e57 49%, #53a4cf 51%);
+  background: linear-gradient(0deg, #f16e57 44%, #53a4cf 56%);
   color: #ffffff;
 }
 .card-container .type-wrapper .fairy-type {
-  background-color: #fdb9e9;
+  background: #fdb9e9;
   color: #212121;
 }
 .card-container .type-wrapper .fire-type {
-  background-color: #fd7d24;
+  background: #fd7d24;
   color: #ffffff;
 }
 .card-container .type-wrapper .ghost-type {
-  background-color: #7B62A3;
+  background: #7B62A3;
   color: #ffffff;
 }
 .card-container .type-wrapper .ground-type {
-  background-color: #fff;
+  background: linear-gradient(0deg, #ab9842 44%, #f7de3f 56%);
   color: #212121;
 }
 .card-container .type-wrapper .normal-type {
-  background-color: #a4acaf;
+  background: #a4acaf;
   color: #212121;
 }
 .card-container .type-wrapper .psychic-type {
-  background-color: #f366b9;
+  background: #f366b9;
   color: #ffffff;
 }
 .card-container .type-wrapper .steel-type {
-  background-color: #9eb7b8;
+  background: #9eb7b8;
   color: #212121;
 }
 .card-container .type-wrapper .dark-type {
-  background-color: #707070;
+  background: #707070;
   color: #ffffff;
 }
 .card-container .type-wrapper .electric-type {
-  background-color: #eed535;
+  background: #eed535;
   color: #212121;
 }
 .card-container .type-wrapper .fighting-type {
-  background-color: #d87234;
+  background: #d87234;
   color: #ffffff;
 }
 .card-container .type-wrapper .flying-type {
-  background-color: #fff;
+  background: linear-gradient(0deg, #bdb9b8 44%, #3dc7ef 56%);
   color: #212121;
 }
 .card-container .type-wrapper .grass-type {
-  background-color: #9bcc50;
+  background: #9bcc50;
   color: #212121;
 }
 .card-container .type-wrapper .ice-type {
-  background-color: #51c4e7;
+  background: #51c4e7;
   color: #212121;
 }
 .card-container .type-wrapper .poison-type {
-  background-color: #b97fc9;
+  background: #b97fc9;
   color: #ffffff;
 }
 .card-container .type-wrapper .rock-type {
-  background-color: #a38c21;
+  background: #a38c21;
   color: #ffffff;
 }
 .card-container .type-wrapper .water-type {
-  background-color: #9bcc50;
+  background: #9bcc50;
   color: #ffffff;
 }
 

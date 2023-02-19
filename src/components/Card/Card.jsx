@@ -52,7 +52,12 @@ export const Card = ({ id, name, types }) => {
       <div className="type-wrapper">
         {
           types?.map((data) =>
-            <span className={`type-pill ${data.type.name}-type`} key={`${data.type.name}-${id}`}>{data.type.name?.charAt(0).toUpperCase() + data.type.name?.slice(1)}</span>
+            <span 
+              className={`type-pill ${data.type.name}-type`} 
+              key={`${data.type.name}-${id}`}
+            >
+                {data.type.name?.charAt(0).toUpperCase() + data.type.name?.slice(1)}
+            </span>
           )
         }
       </div>
