@@ -83,7 +83,7 @@ export const App = () => {
   const [suggesterData, setSuggesterData] = useState([]);
   useEffect(() => {
     pokemonNames === undefined || pokemonNames === null ?
-    console.log("undefined or null") :
+    null :
     setSuggesterData(pokemonNames?.filter(poke => poke.includes(pokemonSearchInput)))
   }, [pokemonSearchInput])
 
