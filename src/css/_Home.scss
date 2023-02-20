@@ -143,7 +143,7 @@
         &:before {
           content: "";
           position: absolute;
-          left: -38px;
+          left: -37px;
           bottom: 0;
           background: transparent url('../assets/large-notch-darkgray.png');
           width: 38px;
@@ -154,7 +154,7 @@
         &:after {
           content: "";
           position: absolute;
-          right: -38px;
+          right: -37px;
           bottom: 0;
           background: transparent url('../assets/large-notch-darkgray.png');
           width: 38px;
@@ -315,6 +315,7 @@
           grid-template-rows: 1fr 1fr;
           justify-items: center;
           align-items: center;
+          padding: 1.875rem 2.5rem;
 
           .header-primary {
             width: fit-content;
@@ -325,6 +326,12 @@
               height: 3rem;
             }
           }
+        }
+      }
+
+      .advanced-search-container {
+        .advanced-search-wrapper {
+          max-width: 70vw;
         }
       }
 
@@ -339,7 +346,7 @@
             align-items: center;
   
             #surprise-button {
-              width: 85.49vw;
+              width: 70vw;
               max-width: none;
               margin-left: 0;
             }
@@ -347,7 +354,7 @@
             .sort-wrapper {
               flex-direction: column;
               align-items: flex-start;
-              width: 85.49vw;
+              width: 70vw;
               margin-top: 1rem;
 
               
@@ -359,7 +366,7 @@
                   margin-top: 0.25rem;
                   .sort-control {
                     margin-left: 0;
-                    width: 85.49vw;
+                    width: 70vw;
                   }
                 }
               }
@@ -375,6 +382,13 @@
       header {
         padding: 0;
       }
+
+      .advanced-search-container {
+        .advanced-search-wrapper {
+          max-width: 70vw;
+        }
+      }
+
       .body-content {
         padding: 0 1.5rem;
       }
@@ -383,6 +397,18 @@
 
   @media only screen and ($mobile-size) {
     main {
+      header {
+        .header-content {
+          padding: 1.875rem 1.5rem;
+        }
+      }
+      
+      .advanced-search-container {
+        .advanced-search-wrapper {
+          max-width: 70vw;
+        }
+      }
+
       .body-content {
         padding: 0 1rem;
       }
