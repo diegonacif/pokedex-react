@@ -45,15 +45,8 @@ export const App = () => {
   }, []);
 
   function handlePokemonSearch(e) {
-    setPokemonSearchInput(e.target.value);
+    setPokemonSearchInput(e.target.value.toLowerCase());
   }
-
-  // const [searchResult, setSearchResult] = useState([])
-  // useEffect(() => {
-  //   setSearchResult(pokemon?.filter(poke => poke.name.includes(pokemonSearchInput)))
-  // }, [])
-
-  // const searchResult = pokemon?.filter(poke => poke.name.includes(pokemonSearchInput))
 
   async function fetchResult() {
     const searchResult = await pokemon?.filter(poke => poke.name.includes(pokemonSearchInput));
