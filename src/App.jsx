@@ -75,7 +75,16 @@ export const App = () => {
     'Menor número primeiro', 'Maior número primeiro', 'A-Z', 'Z-A'
   ];
   const dropdownDefaultOption = options[0];
-  
+
+  // Focused Input
+  const [isFocusedInput, setIsFocusedInput] = useState(false);
+
+  // Suggester Data
+  const [suggesterData, setSuggesterData] = useState([]);
+  useEffect(() => {
+    setSuggesterData(pokemonNames?.filter(poke => poke.includes(pokemonSearchInput)))
+  }, [pokemonSearchInput])
+
   return (
     <div className="app-body">
       <main>
@@ -84,7 +93,28 @@ export const App = () => {
             <div className="header-primary">
               <label htmlFor="name-search">Nome ou número</label>
               <div className="input-wrapper">
-                <input type="text" onChange={(e) => handlePokemonSearch(e)} name="name-search" />
+                <input 
+                  type="text" 
+                  onChange={(e) => handlePokemonSearch(e)} 
+                  onFocus={() => setIsFocusedInput(true)}
+                  onBlur={() => setIsFocusedInput(false)}
+                  name="name-search" 
+                  id="name-search"
+                />
+                {
+                  isFocusedInput && pokemonSearchInput?
+                  <div className="input-suggester">
+                    {
+                      suggesterData.map(names => 
+                        <span>{names}</span>
+                      )
+                    }
+                    {/* <span>Teste</span>
+                    <span>Teste</span>
+                    <span>Teste</span> */}
+                  </div> :
+                  null
+                }
                 <button onClick={() => fetchResult()}>
                   <img src={searchInputImg} alt="" />
                 </button>
