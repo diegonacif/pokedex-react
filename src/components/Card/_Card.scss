@@ -58,26 +58,44 @@
       text-align: center;
       border-radius: 3px;
       margin-top: 0.25rem;
+      font-family: $secondary-font;
+      // font-weight: 600;
     }
 
-    .bug-type { @include type-color($bug-color); color: $white;  }
-    .dragon-type { @include type-color($dragon-color); color: $white; }
-    .fairy-type { @include type-color($fairy-color); color: $black; }
-    .fire-type { @include type-color($fire-color); color: $white; }
-    .ghost-type { @include type-color($ghost-color); color: $white; }
-    .ground-type { @include type-color($ground-color); color: $black; }
-    .normal-type { @include type-color($normal-color); color: $black; }
-    .psychic-type { @include type-color($psychic-color); color: $white; }
-    .steel-type { @include type-color($steel-color); color: $black; }
-    .dark-type { @include type-color($dark-color); color: $white; }
-    .electric-type { @include type-color($electric-color); color: $black; }
-    .fighting-type { @include type-color($fighting-color); color: $white; }
-    .flying-type { @include type-color($flying-color); color: $black; }
-    .grass-type { @include type-color($grass-color); color: $black; }
-    .ice-type { @include type-color($ice-color); color: $black; }
-    .poison-type { @include type-color($poison-color); color: $white; }
-    .rock-type { @include type-color($rock-color); color: $white; }
-    .water-type { @include type-color($grass-color); color: $white; }
+    .bug-type { @include type-color($bug-color); color: $gray-100;  }
+    .dragon-type { @include type-color($dragon-color); color: $gray-100; }
+    .fairy-type { @include type-color($fairy-color); color: $gray-800; }
+    .fire-type { @include type-color($fire-color); color: $gray-100; }
+    .ghost-type { @include type-color($ghost-color); color: $gray-100; }
+    .ground-type { @include type-color($ground-color); color: $gray-800; }
+    .normal-type { @include type-color($normal-color); color: $gray-800; }
+    .psychic-type { @include type-color($psychic-color); color: $gray-100; }
+    .steel-type { @include type-color($steel-color); color: $gray-800; }
+    .dark-type { @include type-color($dark-color); color: $gray-100; }
+    .electric-type { @include type-color($electric-color); color: $gray-800; }
+    .fighting-type { @include type-color($fighting-color); color: $gray-100; }
+    .flying-type { @include type-color($flying-color); color: $gray-800; }
+    .grass-type { @include type-color($grass-color); color: $gray-800; }
+    .ice-type { @include type-color($ice-color); color: $gray-800; }
+    .poison-type { @include type-color($poison-color); color: $gray-100; }
+    .rock-type { @include type-color($rock-color); color: $gray-100; }
+    .water-type { @include type-color($grass-color); color: $gray-100; }
+  }
 
+  @media only screen and ($desktop-size) {
+    width: 31.4375%;
+  }
+
+  @media only screen and ($notebook-size) {
+    // .search-result {
+    //   background-color: green;
+    // }
+  }
+
+  @media only screen and ($tablet-size) {
+    width: 48.4375%;
+  }
+  @media only screen and ($mobile-size) {
+    width: 100%;
   }
 }

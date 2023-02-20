@@ -30,6 +30,13 @@ $poison-color: #b97fc9;
 $rock-color: #a38c21;
 $water-color: #4592c4;
 
+// Media Variables
+$mobile-sm-size: "max-width: 460px";
+$mobile-size: "max-width: 510px";
+$tablet-size: "max-width: 768px";
+$notebook-size: "max-width: 960px";
+$desktop-size: "max-width: 1024px";
+
 @mixin type-color($color) {
   background: #{$color};
 }

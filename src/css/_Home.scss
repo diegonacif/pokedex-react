@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   background: url('../assets/body_bg.png');
 
@@ -294,6 +295,107 @@
           display: flex;
           flex-wrap: wrap;
           margin-top: 3rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and ($desktop-size) {
+    
+  }
+
+  @media only screen and ($notebook-size) {
+    main {
+      header {
+        height: fit-content;
+        padding: 0 2rem;
+
+        .header-content {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          justify-items: center;
+          align-items: center;
+
+          .header-primary {
+            width: fit-content;
+            max-width: 85.49vw;
+            justify-self: center;
+
+            .input-wrapper {
+              height: 3rem;
+            }
+          }
+        }
+      }
+
+      .body-content {
+        padding: 0 2.5rem;
+
+        .main-content {
+
+          .buttons-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+  
+            #surprise-button {
+              width: 85.49vw;
+              max-width: none;
+              margin-left: 0;
+            }
+
+            .sort-wrapper {
+              flex-direction: column;
+              align-items: flex-start;
+              width: 85.49vw;
+              margin-top: 1rem;
+
+              
+              .dropdown-wrapper {
+                img {
+                  left: 1rem;
+                }
+                .sort-root {
+                  margin-top: 0.25rem;
+                  .sort-control {
+                    margin-left: 0;
+                    width: 85.49vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and ($tablet-size) {
+    main {
+      header {
+        padding: 0;
+      }
+      .body-content {
+        padding: 0 1.5rem;
+      }
+    }
+  }
+
+  @media only screen and ($mobile-size) {
+    main {
+      .body-content {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  @media only screen and ($mobile-sm-size) {
+    main {
+      .body-content {
+        padding: 0;
+  
+        .search-result {
+          padding: 0 0.5rem;
         }
       }
     }

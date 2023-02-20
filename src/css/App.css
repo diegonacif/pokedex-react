@@ -69,84 +69,101 @@
   text-align: center;
   border-radius: 3px;
   margin-top: 0.25rem;
+  font-family: "Flexo-Demi", sans-serif;
 }
 .card-container .type-wrapper .bug-type {
   background: #729f3f;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .dragon-type {
   background: linear-gradient(0deg, #f16e57 44%, #53a4cf 56%);
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .fairy-type {
   background: #fdb9e9;
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .fire-type {
   background: #fd7d24;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .ghost-type {
   background: #7B62A3;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .ground-type {
   background: linear-gradient(0deg, #ab9842 44%, #f7de3f 56%);
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .normal-type {
   background: #a4acaf;
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .psychic-type {
   background: #f366b9;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .steel-type {
   background: #9eb7b8;
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .dark-type {
   background: #707070;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .electric-type {
   background: #eed535;
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .fighting-type {
   background: #d87234;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .flying-type {
   background: linear-gradient(0deg, #bdb9b8 44%, #3dc7ef 56%);
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .grass-type {
   background: #9bcc50;
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .ice-type {
   background: #51c4e7;
-  color: #212121;
+  color: #313131;
 }
 .card-container .type-wrapper .poison-type {
   background: #b97fc9;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .rock-type {
   background: #a38c21;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .card-container .type-wrapper .water-type {
   background: #9bcc50;
-  color: #ffffff;
+  color: #f2f2f2;
+}
+@media only screen and (max-width: 1024px) {
+  .card-container {
+    width: 31.4375%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .card-container {
+    width: 48.4375%;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .card-container {
+    width: 100%;
+  }
 }
 
 .app-body {
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   background: url("../assets/body_bg.png");
 }
@@ -405,4 +422,78 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 3rem;
+}
+@media only screen and (max-width: 960px) {
+  .app-body main header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0 2rem;
+  }
+  .app-body main header .header-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .app-body main header .header-content .header-primary {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 85.49vw;
+    justify-self: center;
+  }
+  .app-body main header .header-content .header-primary .input-wrapper {
+    height: 3rem;
+  }
+  .app-body main .body-content {
+    padding: 0 2.5rem;
+  }
+  .app-body main .body-content .main-content .buttons-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .app-body main .body-content .main-content .buttons-wrapper #surprise-button {
+    width: 85.49vw;
+    max-width: none;
+    margin-left: 0;
+  }
+  .app-body main .body-content .main-content .buttons-wrapper .sort-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 85.49vw;
+    margin-top: 1rem;
+  }
+  .app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper img {
+    left: 1rem;
+  }
+  .app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root {
+    margin-top: 0.25rem;
+  }
+  .app-body main .body-content .main-content .buttons-wrapper .sort-wrapper .dropdown-wrapper .sort-root .sort-control {
+    margin-left: 0;
+    width: 85.49vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .app-body main header {
+    padding: 0;
+  }
+  .app-body main .body-content {
+    padding: 0 1.5rem;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .app-body main .body-content {
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .app-body main .body-content {
+    padding: 0;
+  }
+  .app-body main .body-content .search-result {
+    padding: 0 0.5rem;
+  }
 }/*# sourceMappingURL=App.css.map */
